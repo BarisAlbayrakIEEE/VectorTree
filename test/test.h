@@ -282,6 +282,43 @@ TEST(test_VectorTree, set_at) {
 }
 
 /*!
+ * test VectorTree for const iterator
+ */
+TEST(test_VectorTree, const_iterator) {
+    std::size_t step{};
+    std::size_t initial_index{};
+    std::size_t current_index{};
+    auto it{ VT_LARGE.cbegin() };
+    
+    std::uniform_int_distribution<> distr(2 * DEFAULT_BUFFER + 2, LARGE_SIZE - 2 * DEFAULT_BUFFER - 2);
+    initial_index = distr(GEN);
+    current_index = initial_index;
+    it = VT_LARGE.cbegin() + initial_index;
+    ASSERT_EQ(it->_i, VT_LARGE[current_index]._i);
+    step = 2 * DEFAULT_BUFFER + 31;
+    current_index += step;
+    it += step;
+    ASSERT_EQ(it->_i, VT_LARGE[current_index]._i);
+    step = 3;
+    current_index += step;
+    it += step;
+    ASSERT_EQ(it->_i, VT_LARGE[current_index]._i);
+
+    initial_index = distr(GEN);
+    current_index = VT_LARGE.size() - initial_index;
+    it = VT_LARGE.cend() - initial_index;
+    ASSERT_EQ(it->_i, VT_LARGE[current_index]._i);
+    step = 2 * DEFAULT_BUFFER + 31;
+    current_index -= step;
+    it -= step;
+    ASSERT_EQ(it->_i, VT_LARGE[current_index]._i);
+    step = 3;
+    current_index -= step;
+    it -= step;
+    ASSERT_EQ(it->_i, VT_LARGE[current_index]._i);
+}
+
+/*!
  * test VectorTree for traversal - large size
  */
 TEST(test_VectorTree, traversal__large) {

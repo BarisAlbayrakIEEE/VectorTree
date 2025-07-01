@@ -1,0 +1,44 @@
+[==========] Running 18 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 18 tests from test_VectorTree
+[ RUN      ] test_VectorTree.ctor_default
+[       OK ] test_VectorTree.ctor_default (0 ms)
+[ RUN      ] test_VectorTree.ctor_vector__large
+[       OK ] test_VectorTree.ctor_vector__large (2 ms)
+[ RUN      ] test_VectorTree.ctor_vector__edge
+[       OK ] test_VectorTree.ctor_vector__edge (0 ms)
+[ RUN      ] test_VectorTree.emplace_back__large
+[       OK ] test_VectorTree.emplace_back__large (132 ms)
+[ RUN      ] test_VectorTree.emplace_back__edge
+[       OK ] test_VectorTree.emplace_back__edge (85 ms)
+[ RUN      ] test_VectorTree.push_back__large
+[       OK ] test_VectorTree.push_back__large (86 ms)
+[ RUN      ] test_VectorTree.push_back__edge
+[       OK ] test_VectorTree.push_back__edge (85 ms)
+[ RUN      ] test_VectorTree.pop_back__large
+[       OK ] test_VectorTree.pop_back__large (83 ms)
+[ RUN      ] test_VectorTree.pop_back__edge
+[       OK ] test_VectorTree.pop_back__edge (82 ms)
+[ RUN      ] test_VectorTree.erase__large
+[       OK ] test_VectorTree.erase__large (89 ms)
+[ RUN      ] test_VectorTree.erase__edge
+[       OK ] test_VectorTree.erase__edge (87 ms)
+[ RUN      ] test_VectorTree.set_at
+[       OK ] test_VectorTree.set_at (1819 ms)
+[ RUN      ] test_VectorTree.const_iterator
+[       OK ] test_VectorTree.const_iterator (0 ms)
+[ RUN      ] test_VectorTree.traversal__large
+[       OK ] test_VectorTree.traversal__large (0 ms)
+[ RUN      ] test_VectorTree.traversal__edge
+[       OK ] test_VectorTree.traversal__edge (0 ms)
+[ RUN      ] test_VectorTree.for_each__unary__large
+[       OK ] test_VectorTree.for_each__unary__large (4 ms)
+[ RUN      ] test_VectorTree.for_each__unary__edge
+[       OK ] test_VectorTree.for_each__unary__edge (1 ms)
+[ RUN      ] test_VectorTree.for_each__nonunary
+[       OK ] test_VectorTree.for_each__nonunary (4 ms)
+[----------] 18 tests from test_VectorTree (2569 ms total)
+
+[----------] Global test environment tear-down
+[==========] 18 tests from 1 test suite ran. (2570 ms total)
+[  PASSED  ] 18 tests.
