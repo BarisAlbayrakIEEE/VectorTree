@@ -20,10 +20,10 @@ Thus, in summary, the data structure in this header, VectorTree.h, is a persiste
 HAMT is a persistent replacement for the associative data structures (std::unordered_set).
 
 **Note**
-- The VectorTree is not a trie but a tree data structure.
-- The VectorTree aggrees with the definitions, invariants, algorithms and runtime/space complexities defined by Ivan Cukic in Functional Programming in C++.
+- VectorTree is not a trie but a tree data structure.
+- VectorTree aggrees with the definitions, invariants, algorithms and runtime/space complexities defined by Ivan Cukic in Functional Programming in C++.
 
-Obviously, all operations listed in the VectorTree interface are const-qualified as its a functionally persistent data structure.
+Obviously, all operations listed in VectorTree interface are const-qualified as its a functionally persistent data structure.
 Each operation returns a new VectorTree keeping the persistent history of the data.
 
 ## 2. Structure
@@ -38,6 +38,7 @@ A primitive solution to define a persistent vector is a wrapper class for the st
 1. copies the original std::vector into a new one
 2. applies the request on the given element
 3. return the modified copy as the new std::vector
+
 The primitive persistent vector would have a crucial performance problem when:
 - the size of the vector is large or
 - the contained type has a large size.
