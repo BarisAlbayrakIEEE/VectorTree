@@ -1,0 +1,2 @@
+#define VectorTree_VERSION_MAJOR @VectorTree_VERSION_MAJOR@ 
+#define VectorTree_VERSION_MINOR @VectorTree_VERSION_MAJOR@
