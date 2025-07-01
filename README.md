@@ -6,7 +6,8 @@ The basic dynamic array data structure (std::vector) is in the most cases the mo
 Accept for the fundamental issues, the most important feature of the standard vector is the contiguous memory allocation (i.e. the cache efficiency).
 On the other hand, the standard vector has two disadvantages:
 1. Copy operation is linear (O(N)): although the contiguous allocation provides some efficiency (e.g. bitwise copy with memcopy for *trivially copyables*)
-2. Iterators may become invalid due to the reallocation/shrinking (e.g. push_back)\
+2. Iterators may become invalid due to the reallocation/shrinking (e.g. push_back)
+
 The basic data structure in functional programming (FP) is the linked list as it addresses solutions to the above two issues.
 However, the linked list is cumbersome and and it has a very weak performance as the iteration is based on the pointer indirection.
 Hence, in FP, we need a persistent data structure like a linked list which, as well, provides a contiguous memory allocation like a vector.
