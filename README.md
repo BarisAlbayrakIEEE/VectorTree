@@ -80,8 +80,8 @@ The algorithm may require a few modifications if the active leaf node cannot han
 For example, the next leaf node must be determined if the active leaf node is full and the request is a push.
 Considering these exceptional cases, the worst case time complexity becomes logkN which again yields to O(1).
 
-Erase operation applies the swap-and-pop idiom. I will not go through thee details of this idiom.
-However, its worth to note that erase operation consists of two modifications:
+Erase operation applies the swap-and-pop idiom. I will not go through the details of this idiom.
+However, its worth to note that the erase operation consists of two modifications:
 1. the path to the requested element and
 2. the path to the last element which will be swapped with the requested element.
 
