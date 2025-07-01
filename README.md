@@ -49,7 +49,8 @@ The unrelated data is shared with the original VectorTree (i.e. the shared owner
 
 For the operations applied at the end (e.g. push_back, emplace_back or pop_back), the efficiency of the VectorTree data structure:
 - is superior to the efficiency of the primitive persistent vector and
-- converges to the efficiency of the standard vector.\
+- converges to the efficiency of the standard vector.
+
 However, unlike a linked list, the actions applied not at the end are expensive even more expensive than a standard vector.
 We have basically two such operations: insert and erase.
 For the erase function, VectorTree applies a work-around based on the **swap-and-pop idiom**.
@@ -62,7 +63,7 @@ The insert operation is excluded as VectorTree does not preserve the order of th
 The member functions and the iterators of VectorTree are tested hardly using gtest library.
 See ../test directory for the test results.
 
-VectorTree is tested against std::vector and a primitive persistent vector using google benchmark library.
+VectorTree is tested against std::vector and the primitive persistent vector described above using google benchmark library.
 See ([benchmark.pdf](benchmark.pdf)) in ../build/bin directory for the discussions on the results of the benchmark.
 
 ## 4. Approach
@@ -77,6 +78,11 @@ The algorithm may require a few modifications if the active leaf node cannot han
 For example, the next leaf node must be determined if the active leaf node is full and the request is a push.
 Considering these exceptional cases, the worst case time complexity becomes logkN which again yields to O(1).
 
+Erase operation applies the swap-and-pop idiom. I will not go through thee details of this idiom.
+However, its worth to note that erase operation consists of two modifications:
+1. the path to the requested element and
+2. the path to the last element which will be swapped with the requested element.
+
 VectorTree has its own STL style random access iterators (const and non-const).
 The non-const iterator is private and used internally.
 An STL style for_each algorithm is implemented as a member function which:
@@ -88,7 +94,7 @@ An STL style for_each algorithm is implemented as a member function which:
 VectorTree provides an exception and thread safe solution by default as a result of the persistency.
 
 ## 6. Requirements
-The contained type T must satisfy the following interface:\
+The contained type T must satisfy the following interface:
 ```
 std::copy_constructible<T>
 std::is_move_assignable<T>
