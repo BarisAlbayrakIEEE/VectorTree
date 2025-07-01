@@ -66,7 +66,7 @@ See [test results](https://github.com/BarisAlbayrakIEEE/VectorTree/tree/master/t
 
 VectorTree is tested against std::vector and the primitive persistent vector described above using the google benchmark library.
 See [benchmark source](https://github.com/BarisAlbayrakIEEE/VectorTree/tree/master/benchmark) directory for the benchmark source files.
-See [benchmark results](https://github.com/BarisAlbayrakIEEE/VectorTree/tree/master/test/benchmark_results.pdf) for the benchmark results.
+See [benchmark results](https://github.com/BarisAlbayrakIEEE/VectorTree/tree/master/benchmark/benchmark_results.pdf) for the benchmark results.
 
 ## 4. Approach
 The below flowchart is followed for the operations at the end:
