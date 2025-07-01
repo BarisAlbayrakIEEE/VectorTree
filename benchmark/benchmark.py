@@ -16,13 +16,13 @@ descriptions.append(
     "This report summarizes the benchmark analysis of VectorTree \n" +
     "by comparing its performance with:\n" +
     "  1. std::vector\n" +
-    "  2. a simple persistent vector\n\n" +
+    "  2. a primitive persistent vector\n\n" +
     "VectorTree is created to obtain a persistent version of std::vector for multithreaded usage. " +
     "In other words, the target of VectorTree is to achieve the performance of std::vector " +
     "while keeping the persistency to deal with the concurrency issues. " +
     "Hence, the 1st container to compare with is std::vector. " +
-    "The 2nd one is a very simple definition for a persistent vector. " +
-    "The flowchart of any operation on the simple persistent vector is as follows:\n" +
+    "The 2nd one is a primitive definition for a persistent vector. " +
+    "The flowchart of any operation on the primitive persistent vector is as follows:\n" +
     "  1. create a copy of the original vector,\n" +
     "  2. apply the request on the copy,\n" +
     "  3. return the modified copy."
@@ -84,7 +84,7 @@ descriptions.append(
     "    it performs efficiently (~600ms):\n" +
     "      -> See graphs with BUFFER_SIZE_1\n" +
     "  - For containers of large size, VectorTree performs way better than\n" +
-    "    the simple persistent vector:\n" +
+    "    the primitive persistent vector:\n" +
     "      -> See graphs with BUFFER_SIZE_3\n" +
     "  - VectorTree approaches to std::vector\n" +
     "    in case of the three fundamental operations:\n" +
