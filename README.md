@@ -60,11 +60,13 @@ However, this is neither a standard library (STL) nor a public open source libra
 **Hence, as an in-house data structure, this confliction can be acceptable.**
 The insert operation is excluded as VectorTree does not preserve the order of the contained elements.
 
-The member functions and the iterators of VectorTree are tested hardly using gtest library.
-See [test](https://github.com/BarisAlbayrakIEEE/VectorTree/tree/master/test) directory for the test results.
+The member functions and the iterators of VectorTree are tested hardly using the gtest library.
+See [test sources](https://github.com/BarisAlbayrakIEEE/VectorTree/tree/master/test) directory for the gtest source files.
+Run test.out in the [build](https://github.com/BarisAlbayrakIEEE/VectorTree/tree/master/build/bin) directory in order to regenarate the test results.
 
-VectorTree is tested against std::vector and the primitive persistent vector described above using google benchmark library.
-See ([benchmark.pdf](benchmark.pdf)) in ../build/bin directory for the discussions on the results of the benchmark.
+VectorTree is tested against std::vector and the primitive persistent vector described above using the google benchmark library.
+See ([benchmark results](benchmark.pdf)) in the [build](https://github.com/BarisAlbayrakIEEE/VectorTree/tree/master/build/bin) directory 
+for the discussions on the results of the benchmark.
 
 ## 4. Approach
 The below flowchart is followed for the operations at the end:
