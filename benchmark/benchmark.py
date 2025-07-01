@@ -121,7 +121,7 @@ descriptions.append(
 )
 
 # load csv
-df = pd.read_csv("benchmark.csv")
+df = pd.read_csv("../build/bin/benchmark_results.csv")
 
 # parse the 'name' column into its components and the iteration count
 # Example name: "BM__emplace_back__small__BUFFER_SIZE_1__type_std/32" ->
@@ -138,7 +138,7 @@ df = pd.concat([df, components], axis=1)
 df['time_us'] = df['real_time'] * 1e-3
 
 # create the pdf output
-with PdfPages("benchmark.pdf") as pdf:
+with PdfPages("benchmark_results.pdf") as pdf:
     # title and description pages
     for i_description, description in enumerate(descriptions):
         fig, ax = plt.subplots()
