@@ -9,7 +9,7 @@ On the other hand, the standard vector has two disadvantages:
 2. Iterators may become invalid due to the reallocation/shrinking (e.g. push_back)
 
 The basic data structure in functional programming (FP) is the linked list as it addresses solutions to the above two issues.
-However, the linked list is cumbersome and and it has a very weak performance as the iteration is based on the pointer indirection.
+However, the linked list is cumbersome and it has a very weak performance as the iteration is based on the pointer indirection.
 Hence, in FP, we need a persistent data structure like a linked list which, as well, provides a contiguous memory allocation like a vector.
 
 Ivan Cukic, in his famous book about FP, Functional Programming in C++, describes a data structure 
@@ -19,7 +19,7 @@ Phill Bagwell's trie structure is Hash Array Mapped Trie (HAMT).
 Thus, in summary, the data structure in this header, VectorTree.h, is a persistent replacement for the standard vector and 
 HAMT is a persistent replacement for the associative data structures (std::unordered_set).
 
-**Note**\
+**Note**
 - The VectorTree is not a trie but a tree data structure.
 - The VectorTree aggrees with the definitions, invariants, algorithms and runtime/space complexities defined by Ivan Cukic in Functional Programming in C++.
 
