@@ -62,11 +62,11 @@ The insert operation is excluded as VectorTree does not preserve the order of th
 
 The member functions and the iterators of VectorTree are tested hardly using the gtest library.
 See [test source](https://github.com/BarisAlbayrakIEEE/VectorTree/tree/master/test) directory for the test source files.
-See [test results](https://github.com/BarisAlbayrakIEEE/VectorTree/tree/master/test/test_results.txt) for the test results.
+See [test results](https://github.com/BarisAlbayrakIEEE/VectorTree/tree/master/test/test_results.txt) to review the results.
 
 VectorTree is tested against std::vector and the primitive persistent vector described above using the google benchmark library.
 See [benchmark source](https://github.com/BarisAlbayrakIEEE/VectorTree/tree/master/benchmark) directory for the benchmark source files.
-See [benchmark results](https://github.com/BarisAlbayrakIEEE/VectorTree/tree/master/benchmark/benchmark_results.pdf) for the benchmark results.
+See [benchmark results](https://github.com/BarisAlbayrakIEEE/VectorTree/tree/master/benchmark/benchmark_results.pdf) to review the results.
 
 ## 4. Approach
 The below flowchart is followed for the operations at the end:
