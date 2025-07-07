@@ -139,6 +139,7 @@
 #include <stdexcept>
 #include <utility>
 #include <iterator>
+#include <concepts>
 #include <cmath>
 #include <algorithm>
 #include <assert.h>
@@ -148,6 +149,14 @@ namespace VectorTreeNamespace {
 
 	static const unsigned char DEFAULT_BUFFER = 32;
 	static const unsigned char MAX_VectorTree_HEIGHT = 8;
+
+	/*!
+	 * @brief A concept to constrain a template parameter to have the cbegin() function
+	 */
+	template<typename Container>
+	concept concept_cbegin = requires(const Container& container) {
+		{ container.cbegin() } -> std::forward_iterator;
+	};
 
 	/*!
 	 * @brief VectorTree class
@@ -1036,7 +1045,9 @@ namespace VectorTreeNamespace {
 		/*!
 		 * @brief ctor with the input std::vector
 		 */
-		explicit VectorTree(const std::vector<T>& v) : VectorTree(v.size())
+		template<template <typename> typename Container>
+			requires std::forward_iterator<typename Container<T>::iterator> && concept_cbegin<Container<T>>
+		explicit VectorTree(const Container<T>& v) : VectorTree(v.size())
 		{
 			std::size_t size_current{};
 			auto it{ v.cbegin() };
