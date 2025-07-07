@@ -4,7 +4,7 @@
 3.   [Performance](#sec3)
 4.   [Approach](#sec4)
 5.   [Concurrency](#sec5)
-6.   [Some Requirements](#sec6)
+6.   [Requirements](#sec6)
 
 # Persistent Vector Tree
 
